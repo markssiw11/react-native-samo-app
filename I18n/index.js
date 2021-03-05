@@ -25,7 +25,7 @@ export const i18nInit = () =>
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
       resources,
-      lng: 'vi',
+      lng: getDeviceLanguage(),
       fallbackLng: 'vi',
       // keySeparator: false, // we do not use keys in form messages.welcome
       debug: process.env.NODE_ENV !== 'production',
@@ -37,6 +37,7 @@ export const i18nInit = () =>
         bindI18n: 'languageChanged loaded',
         bindStore: 'added removed',
         nsMode: 'default',
+        useSuspense: true,
       },
     });
 export const currLanguage = () => i18n.language.substr(0, 2);

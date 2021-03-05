@@ -82,8 +82,10 @@ export const FONTS = {
 export const DARK_THEME = {
   ...DarkTheme,
   colors: {
-    ...DarkTheme.colors,
+    // ...DarkTheme.colors,
+    background: '#565C65',
     border: 'transparent',
+    text: COLORS.white,
   },
 };
 export const DEFAULT_THEME = {

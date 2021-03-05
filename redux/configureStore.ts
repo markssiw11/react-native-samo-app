@@ -9,7 +9,7 @@ import sagas from './sagas';
 const config = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: [], //'consult'
+  whitelist: ['settings'], //'consult'
   debug: true, //to get useful logging
 };
 

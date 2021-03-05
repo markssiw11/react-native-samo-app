@@ -5,5 +5,5 @@
 
 // import theme from './themeReducer';
 import auth from './auth';
-
-export default { auth };
+import settings from './settings';
+export default {auth, settings};

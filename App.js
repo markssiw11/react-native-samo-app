@@ -8,47 +8,57 @@
 
 import React from 'react';
 import {ActivityIndicator} from 'react-native';
-import {Provider} from 'react-redux';
+import {connect, Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/es/integration/react';
-import configureStore from './redux/configureStore';
-
-import {SignUp} from './screens';
+import {I18nextProvider} from 'react-i18next';
 import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+
+import configureStore from './redux/configureStore';
 
 import Tabs from './navigation/tabs';
 import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from './constants';
-
+import i18n, {i18nInit} from './i18n';
+import NavigateScreen from './screens/navigation';
 const Stack = createStackNavigator();
 const {persistor, store} = configureStore();
 
-const NavigateScreen = () => {
+// const NavigateScreen = () => {
+//   return (
+//     <NavigationContainer theme={DEFAULT_THEME}>
+//       <Stack.Navigator
+//         screenOptions={{
+//           headerShown: false,
+//         }}
+//         initialRouteName={'Home'}>
+//         <Stack.Screen name="SignUp" component={SignUp} />
+
+//         {/* Tabs */}
+//         <Stack.Screen name="Home" component={Tabs} />
+
+//         {/* <Stack.Screen name="Scan" component={Scan} /> */}
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
+
+const RenderContent = () => {
   return (
-    <NavigationContainer theme={DEFAULT_THEME}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName={'SignUp'}>
-        <Stack.Screen name="SignUp" component={SignUp} />
-
-        {/* Tabs */}
-        <Stack.Screen name="Home" component={Tabs} />
-
-        {/* <Stack.Screen name="Scan" component={Scan} /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <I18nextProvider i18n={i18n}>
+      <NavigateScreen />
+    </I18nextProvider>
   );
 };
-
+const onBeforeLift = async () => {
+  await i18nInit();
+};
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate
         loading={<ActivityIndicator />}
-        // onBeforeLift={onBeforeLift}
+        onBeforeLift={onBeforeLift}
         persistor={persistor}>
-        <NavigateScreen />
+        <RenderContent />
       </PersistGate>
     </Provider>
   );

@@ -3,17 +3,27 @@
 */
 
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Switch} from 'react-native';
-import {COLORS} from '../../constants';
-import * as TextAction from '../../redux/actions/auth';
-import {connect, useDispatch} from 'react-redux';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Switch,
+  Modal,
+  TouchableWithoutFeedback,
+  FlatList,
+} from 'react-native';
+import {useTheme} from '@react-navigation/native';
 
-function SettingsScreen() {
+import {COLORS, SIZES} from '../../constants';
+import * as SettingsAction from '../../redux/actions/settings';
+import {connect, useDispatch} from 'react-redux';
+import {t} from '../../i18n';
+function SettingsScreen({isDarkMode}) {
+  const {colors} = useTheme();
   const dispatch = useDispatch();
-  const [isDarkMode, setMode] = useState(false);
   const toggleSwitch = () => {
-    setMode((previousState) => !previousState);
-    dispatch(TextAction.testReducers('1234567890'));
+    dispatch(SettingsAction.changeMode(!isDarkMode));
   };
   return (
     <View style={styles.ctn}>
@@ -24,6 +34,7 @@ function SettingsScreen() {
         onValueChange={toggleSwitch}
         value={isDarkMode}
       />
+      <Text style={{color: colors.text}}>{t('signIn')}</Text>
     </View>
   );
 }
@@ -41,5 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-
-export default SettingsScreen;
+const mapStateToProps = (state) => ({
+  isDarkMode: state?.settings?.isDarkMode,
+});
+export default connect(mapStateToProps)(SettingsScreen);
