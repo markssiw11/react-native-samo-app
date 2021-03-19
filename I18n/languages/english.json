@@ -1,6 +1,6 @@
 {
-   "signIn": "Sign In",
-   "logOut": "Log Out"
-
-
+   "signIn": "Sign in",
+   "signOut": "Sign out",
+   "personalData": "Personal Data",
+   "settings": "Settings"
 }

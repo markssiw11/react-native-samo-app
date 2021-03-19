@@ -1,4 +1,7 @@
 {
   "signIn": "Đăng nhập",
-  "logOut": "Đăng xuất"
+  "signOut": "Đăng xuất",
+  "personalData": "Thông tin cá nhân",
+  "settings": "Cài đặt"
+
 }

@@ -6,9 +6,10 @@ import {
 } from '@react-navigation/bottom-tabs';
 import Svg, {Path} from 'react-native-svg';
 import {isIphoneX} from 'react-native-iphone-x-helper';
-import MainStack from './stack/mainStack';
-import {Home, Scan, Settings} from '../screens';
-import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from '../constants';
+import MainHome from '../../screens/main';
+import {Home, Scan, Settings} from '../../screens';
+import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from '../../constants';
+import Profile from '../../screens/profile';
 const Tab = createBottomTabNavigator();
 
 const TabBarCustomButton = ({
@@ -113,7 +114,7 @@ const Tabs = () => {
       tabBar={(props) => <CustomTabBar props={props} />}>
       <Tab.Screen
         name="Home"
-        component={MainStack}
+        component={MainHome}
         options={{
           tabBarIcon: ({focused}) => (
             <Image
@@ -151,7 +152,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="User"
-        component={Home}
+        component={Profile}
         options={{
           tabBarIcon: ({focused}) => (
             <Image

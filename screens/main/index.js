@@ -1,11 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import FontIcon from 'react-native-vector-icons/FontAwesome5';
 import {COLORS} from '../../constants';
-function MainScreen(params) {
+class Main extends Component {
+  render() {
+    const {navigation} = this.props;
+    return (
+      <View style={[styles.ctn]}>
+        <HeaderMain onPress={() => onPressNav(navigation)} />
+      </View>
+    );
+  }
+}
+const onPressNav = (navigation) => {
+  navigation.openDrawer();
+};
+function MainScreen({navigation}) {
   return (
     <View style={[styles.ctn]}>
-      <HeaderMain />
+      <HeaderMain onPress={onPressNav} />
     </View>
   );
 }
@@ -32,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MainScreen;
+export default Main;

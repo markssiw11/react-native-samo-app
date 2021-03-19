@@ -9,18 +9,17 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import MainScreen from '../../screens/main';
-
+import DrawerScreen from '../../navigation/drawer';
 const Stack = createStackNavigator();
 
 function MainStack() {
   return (
     <Stack.Navigator
-      initialRouteName={'Home'}
+      initialRouteName={'drawerHome'}
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="main" component={MainScreen} />
+      <Stack.Screen name="drawerHome" component={DrawerScreen} />
     </Stack.Navigator>
   );
 }

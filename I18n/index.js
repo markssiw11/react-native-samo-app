@@ -28,7 +28,8 @@ export const i18nInit = () =>
       lng: getDeviceLanguage(),
       fallbackLng: 'vi',
       // keySeparator: false, // we do not use keys in form messages.welcome
-      debug: process.env.NODE_ENV !== 'production',
+      // debug: process.env.NODE_ENV !== 'production',
+      debug: false,
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
       },

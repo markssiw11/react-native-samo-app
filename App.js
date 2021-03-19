@@ -15,8 +15,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import configureStore from './redux/configureStore';
 
-import Tabs from './navigation/tabs';
-import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from './constants';
 import i18n, {i18nInit} from './i18n';
 import NavigateScreen from './screens/navigation';
 const Stack = createStackNavigator();

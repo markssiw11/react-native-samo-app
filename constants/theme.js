@@ -9,13 +9,15 @@ export const COLORS = {
   // base colors
   primary: '#24C16B', // green
   secondary: '#0C381F', // dark green
-
+  info: '#14A3B8',
+  warring: '#FFC106',
+  light: '#F8F9FA',
   green: '#66D59A',
   lightGreen: '#E6FEF0',
 
   lime: '#00BA63',
   emerald: '#2BC978',
-
+  lightCyan: '#CDEDF6',
   red: '#FF4134',
   lightRed: '#FFF1F0',
 
@@ -29,11 +31,14 @@ export const COLORS = {
   white: '#FFFFFF',
 
   lightGray: '#FCFBFC',
+  boldGrey: '#3e3e3e',
   gray: '#C1C3C5',
   darkgray: '#C3C6C7',
   darkTurquoise: '#50C9CE',
   csBackGround: '#F1F2F6',
-
+  gainsboro: '#dcdcdc',
+  lightblue: '#add8e6',
+  mintcream: '#f5fffa',
   transparent: 'transparent',
 };
 
@@ -44,7 +49,9 @@ export const SIZES = {
   radius: 30,
   padding: 10,
   padding2: 12,
-
+  bottom: 30,
+  top: 50,
+  border: 5,
   // font sizes
   largeTitle: 50,
   h1: 30,
@@ -77,6 +84,8 @@ export const FONTS = {
   body3: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body3, lineHeight: 22},
   body4: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body4, lineHeight: 22},
   body5: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body5, lineHeight: 22},
+  txt1: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body1},
+  txt5: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body5},
 };
 
 export const DARK_THEME = {
@@ -96,6 +105,20 @@ export const DEFAULT_THEME = {
   },
 };
 
-const appTheme = {COLORS, SIZES, FONTS, DARK_THEME, DEFAULT_THEME};
+export const STYLES = {
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+
+    elevation: 4,
+  },
+};
+
+const appTheme = {COLORS, SIZES, FONTS, DARK_THEME, DEFAULT_THEME, STYLES};
 
 export default appTheme;

@@ -7,27 +7,21 @@
  */
 
 import React from 'react';
-import {ActivityIndicator} from 'react-native';
-import {connect, Provider} from 'react-redux';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
-import {
-  createBottomTabNavigator,
-  BottomTabBar,
-} from '@react-navigation/bottom-tabs';
-import {SignUp} from '../../screens';
+import {connect} from 'react-redux';
+import {NavigationContainer} from '@react-navigation/native';
 
-import Tabs from '../../navigation/tabs';
-import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from '../../constants';
+// import Tabs from '../../navigation/tab';
+import Drawers from '../../navigation/drawer';
+import {DARK_THEME, DEFAULT_THEME} from '../../constants';
 
-const TabScreen = ({isDarkMode}) => {
+const NavigationScreen = ({isDarkMode}) => {
   return (
     <NavigationContainer theme={isDarkMode ? DARK_THEME : DEFAULT_THEME}>
-      <Tabs />
+      <Drawers />
     </NavigationContainer>
   );
 };
 const mapStateToProps = (state) => ({
   isDarkMode: state?.settings.isDarkMode,
 });
-export default connect(mapStateToProps)(TabScreen);
+export default connect(mapStateToProps)(NavigationScreen);
