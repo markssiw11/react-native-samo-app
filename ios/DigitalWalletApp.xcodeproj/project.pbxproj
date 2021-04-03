@@ -22,10 +22,12 @@
 		2DCD954D1E0B4F2C00145EB5 /* DigitalWalletAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DigitalWalletAppTests.m */; };
 		2FDEA1EC28E8EEDBCB49157D /* libPods-DigitalWalletApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB8C76B217CF76B9302228 /* libPods-DigitalWalletApp-tvOSTests.a */; };
 		37FF5BBB65D2401B85D11F38 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79FB27C95264BE6BAA83495 /* Roboto-Bold.ttf */; };
+		3C57C48D2617050100098809 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C57C48F2617050100098809 /* InfoPlist.strings */; };
 		45DC230517864AAB8C3003C2 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC93E45E6242D4BB2A1576 /* Roboto-ThinItalic.ttf */; };
 		48614176CE7F495E89E35B40 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C166671013490FAA243992 /* Roboto-Black.ttf */; };
 		4AFE82491BB07059DD9A2FB0 /* libPods-DigitalWalletApp-DigitalWalletAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68561B2E4174FF0FEB80F7 /* libPods-DigitalWalletApp-DigitalWalletAppTests.a */; };
 		54A0870330F743CB9A70191E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EA3BD28D24C4514A99A1A8F /* Roboto-Medium.ttf */; };
+		67095E66F73A45369C497A85 /* SFUIDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42B182332FE400EAEE779D4 /* SFUIDisplay-Light.ttf */; };
 		6BACEAEEC544483071F4EB2F /* libPods-DigitalWalletApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C8728F47BA2ABAFA7E4D83 /* libPods-DigitalWalletApp.a */; };
 		798A67932C8D43B284097412 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4394D03D1F14ABDB59F2670 /* Roboto-LightItalic.ttf */; };
 		7F964AB64CAB4CF2AFE59653 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ECA83F76C61428390F6BAF1 /* RobotoCondensed-Italic.ttf */; };
@@ -72,36 +74,55 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DigitalWalletApp/main.m; sourceTree = "<group>"; };
 		1480895387CC4A687B754E47 /* libPods-DigitalWalletApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DigitalWalletApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157C6E4A462243E1B1868526 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		17441F06884648CDA66345E5 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		17A3C21624824103B8C7D9E1 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		1D6579958051F9EFCF5FD5F8 /* Pods-DigitalWalletApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp.debug.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp/Pods-DigitalWalletApp.debug.xcconfig"; sourceTree = "<group>"; };
 		245A007AB42BF9929379149B /* Pods-DigitalWalletApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-tvOS/Pods-DigitalWalletApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		27C166671013490FAA243992 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		2879B43750A2407FB7992E2F /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../assets/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2A10C0BE46D278E02C597175 /* Pods-DigitalWalletApp-DigitalWalletAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-DigitalWalletAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-DigitalWalletAppTests/Pods-DigitalWalletApp-DigitalWalletAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B7CC78B4BF5473DA898BE82 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* DigitalWalletApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigitalWalletApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* DigitalWalletApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DigitalWalletApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E59C342798E4B988BD90E5F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		34E71309622D68E001D114E0 /* Pods-DigitalWalletApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-tvOSTests/Pods-DigitalWalletApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		39066B787CCD4FDFB1795CA0 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		3C57C48E2617050100098809 /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3C57C4902617050C00098809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F6CF6FF5BC54A8DA1585379 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		4520117F7BD34D6BB45FAC3A /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		45324C0B764A40DF8581084D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		4A87705BBA34E5C6A6F0E65F /* Pods-DigitalWalletApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-tvOSTests/Pods-DigitalWalletApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D5311E857F24310BADCE9B9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		4D68561B2E4174FF0FEB80F7 /* libPods-DigitalWalletApp-DigitalWalletAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DigitalWalletApp-DigitalWalletAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C8728F47BA2ABAFA7E4D83 /* libPods-DigitalWalletApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DigitalWalletApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0ADA5228F1433696AD8341 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		5A709E2A0BF9452EADC4F70E /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		5D4198A4F659426F92330BF0 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		61E4A3F3336822C3E117D036 /* Pods-DigitalWalletApp-DigitalWalletAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-DigitalWalletAppTests.release.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-DigitalWalletAppTests/Pods-DigitalWalletApp-DigitalWalletAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		661AE537BA53443182767233 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		6E3D20B0D5C044B39DDBDBB8 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		7EA3BD28D24C4514A99A1A8F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		7EEA58C18D6446E1B6ABB34C /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Light.ttf"; path = "../assets/fonts/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DigitalWalletApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		870EF3331A724A18B17E8B68 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		9ECA83F76C61428390F6BAF1 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Italic.ttf"; path = "../assets/fonts/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		A4394D03D1F14ABDB59F2670 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../assets/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		B4DF91C7EC694DE79C129C83 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		BA88C4BFB7E245DB83D4D1BD /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Bold.ttf"; path = "../assets/fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		BA8FA9C2925049EEA7E7292E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		C79FB27C95264BE6BAA83495 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C8FB03B9ECDB42EE9323048D /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Regular.ttf"; path = "../assets/fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		D06507346726425CA83EFC8A /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../assets/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D42B182332FE400EAEE779D4 /* SFUIDisplay-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFUIDisplay-Light.ttf"; path = "../assets/fonts/SFUIDisplay-Light.ttf"; sourceTree = "<group>"; };
 		D729C4275EA53A6563EE7A11 /* Pods-DigitalWalletApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp.release.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp/Pods-DigitalWalletApp.release.xcconfig"; sourceTree = "<group>"; };
+		D9D700306EDD45E19EA81741 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		DDBE09D26DEF4FBDAB914F6E /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-BoldItalic.ttf"; path = "../assets/fonts/RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
 		DDEB8C76B217CF76B9302228 /* libPods-DigitalWalletApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DigitalWalletApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE89AB1BBB34460A6DDC8B5 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FC61968677904B55864029CA /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		FFFC24901C32261871D2F421 /* Pods-DigitalWalletApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-tvOS/Pods-DigitalWalletApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +214,24 @@
 				7EEA58C18D6446E1B6ABB34C /* RobotoCondensed-Light.ttf */,
 				0CA085EC7FBF4458BFF49C73 /* RobotoCondensed-LightItalic.ttf */,
 				C8FB03B9ECDB42EE9323048D /* RobotoCondensed-Regular.ttf */,
+				D42B182332FE400EAEE779D4 /* SFUIDisplay-Light.ttf */,
+				5D4198A4F659426F92330BF0 /* AntDesign.ttf */,
+				2E59C342798E4B988BD90E5F /* Entypo.ttf */,
+				D9D700306EDD45E19EA81741 /* EvilIcons.ttf */,
+				39066B787CCD4FDFB1795CA0 /* Feather.ttf */,
+				EAE89AB1BBB34460A6DDC8B5 /* FontAwesome.ttf */,
+				FC61968677904B55864029CA /* FontAwesome5_Brands.ttf */,
+				BA8FA9C2925049EEA7E7292E /* FontAwesome5_Regular.ttf */,
+				870EF3331A724A18B17E8B68 /* FontAwesome5_Solid.ttf */,
+				6E3D20B0D5C044B39DDBDBB8 /* Fontisto.ttf */,
+				45324C0B764A40DF8581084D /* Foundation.ttf */,
+				17441F06884648CDA66345E5 /* Ionicons.ttf */,
+				17A3C21624824103B8C7D9E1 /* MaterialCommunityIcons.ttf */,
+				661AE537BA53443182767233 /* MaterialIcons.ttf */,
+				3F6CF6FF5BC54A8DA1585379 /* Octicons.ttf */,
+				2B7CC78B4BF5473DA898BE82 /* SimpleLineIcons.ttf */,
+				B4DF91C7EC694DE79C129C83 /* Zocial.ttf */,
+				3C57C48F2617050100098809 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -377,6 +416,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"vi-VN",
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -412,6 +452,7 @@
 				EE9EE19C5B184F3BA45E0B97 /* Roboto-Italic.ttf in Resources */,
 				AF0C7402E5194A179366E6FA /* Roboto-Light.ttf in Resources */,
 				798A67932C8D43B284097412 /* Roboto-LightItalic.ttf in Resources */,
+				3C57C48D2617050100098809 /* InfoPlist.strings in Resources */,
 				54A0870330F743CB9A70191E /* Roboto-Medium.ttf in Resources */,
 				A55E52718848407094A8D158 /* Roboto-MediumItalic.ttf in Resources */,
 				0539CECA23504D54B9E46653 /* Roboto-Regular.ttf in Resources */,
@@ -423,6 +464,7 @@
 				05768D89B0EE48DD9F13CD46 /* RobotoCondensed-Light.ttf in Resources */,
 				D4D63CCE2A6C45D9A96E2115 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				E34C5ADF13A4445B886C241C /* RobotoCondensed-Regular.ttf in Resources */,
+				67095E66F73A45369C497A85 /* SFUIDisplay-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1E74BB4B5EC2F05BDC9FADC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -750,6 +792,18 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		3C57C48F2617050100098809 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C57C48E2617050100098809 /* vi-VN */,
+				3C57C4902617050C00098809 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -812,7 +866,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp1;
 				PRODUCT_NAME = DigitalWalletApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -838,7 +892,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp1;
 				PRODUCT_NAME = DigitalWalletApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

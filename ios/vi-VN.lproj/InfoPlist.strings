@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  DigitalWalletApp
+
+  Created by Nguyenvanlong on 4/2/21.
+  
+*/
+
+
+NSCameraUsageDescription = "NSCameraUsageDescription vi";
+NSPhotoLibraryUsageDescription = "NSPhotoLibraryUsageDescription vi";

@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, {Component, useState} from 'react';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import FontIcon from 'react-native-vector-icons/FontAwesome5';
 import {COLORS} from '../../constants';
 class Main extends Component {
@@ -15,6 +16,7 @@ class Main extends Component {
 const onPressNav = (navigation) => {
   navigation.openDrawer();
 };
+
 function MainScreen({navigation}) {
   return (
     <View style={[styles.ctn]}>

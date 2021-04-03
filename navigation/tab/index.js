@@ -10,6 +10,8 @@ import MainHome from '../../screens/main';
 import {Home, Scan, Settings} from '../../screens';
 import {COLORS, icons, DARK_THEME, DEFAULT_THEME} from '../../constants';
 import Profile from '../../screens/profile';
+import TreeView from '../../screens/tree';
+import TreeStack from '../stack/treeStack';
 const Tab = createBottomTabNavigator();
 
 const TabBarCustomButton = ({
@@ -170,7 +172,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="Settings"
-        component={Settings}
+        component={TreeStack}
         options={{
           tabBarIcon: ({focused}) => (
             <Image

@@ -1,12 +1,40 @@
-import React from 'react';
-import {View, SafeAreaView, Text, StyleSheet, TextInput} from 'react-native';
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  forwardRef,
+  createRef,
+} from 'react';
+import {
+  View,
+  SafeAreaView,
+  Text,
+  StyleSheet,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import {COLORS, SIZES, FONTS, STYLES} from '../../constants';
-
+// import CheckBox from '@react-native-community/checkbox';
+import BottomSheetScreen from '../../container/bottomSheet';
+import CheckBox from '../../container/checkBox';
 function ProfileScreen(params) {
+  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const onPress = () => {
+    setToggleCheckBox(!toggleCheckBox);
+  };
+  const formRef = useRef(null);
+  const bs = createRef();
+  const onPressSnapPoint = () => {
+    bs.current?.snapTo(0);
+  };
   return (
-    <SafeAreaView style={styles.ctn}>
-      <View style={styles.avatarCtn}>
+    <KeyboardAwareScrollView
+      style={styles.ctn}
+      showsVerticalScrollIndicator={false}>
+      <TouchableOpacity style={styles.avatarCtn} onPress={onPressSnapPoint}>
         <View style={styles.circle}>
           <FontAwesome5Icon
             name="image"
@@ -21,32 +49,78 @@ function ProfileScreen(params) {
           ]}>
           change avatar
         </Text>
-        <View style={{marginTop: SIZES.top}}>
-          <BaseText icon="user" value="Nguyễn Văn Long" title="Họ Và Tên" />
-          <BaseText icon="phone" value="0934172647" title="Số Điện Thoại" />
-        </View>
+      </TouchableOpacity>
+      <View style={styles.body}>
+        <BaseText icon="user" value="Nguyễn Văn Long" title="Họ Và Tên" />
+        <BaseText icon="phone" value="0934172647" title="Số Điện Thoại" />
+        <GenderSelect
+          value={toggleCheckBox}
+          onChange={onPress}
+          title={'Giới Tính'}
+          ref={formRef}
+        />
+        <BaseText icon="phone" title="Địa Chỉ" />
+        <BaseText icon="phone" title="Địa Chỉ" />
+        <BaseText icon="phone" title="Địa Chỉ" />
+        <BaseText icon="phone" title="Địa Chỉ" />
+
+        <View style={{height: 200}} />
       </View>
-    </SafeAreaView>
+      <BottomSheetScreen
+        sheetRef={bs}
+        // fall={fall}
+        // onPressFirst={onPressChooseImage}
+      />
+    </KeyboardAwareScrollView>
   );
 }
-const SIZE_ICON = 75;
+const SIZE_ICON = 90;
 
-function BaseText({icon, value, title}) {
+function BaseText({icon, value, title = 'Example'}) {
   return (
     <View style={styles.inputCtn}>
       <Text style={styles.headerTitle}>{title}</Text>
       <View style={styles.txtInputCtn}>
-        {/* <FontAwesome5Icon
-          name={icon}
-          size={SIZES.body4}
-          style={styles.icon}
-          color={COLORS.mintcream}
-        /> */}
-        <TextInput value={value} style={styles.txtInput} autoCorrect={false} />
+        <TextInput
+          value={value}
+          style={styles.txtInput}
+          placeholder={title}
+          autoCorrect={false}
+        />
       </View>
     </View>
   );
 }
+
+const GenderSelect = forwardRef(({value, title, disabled}, ref) => {
+  const [gender, setGender] = useState(value);
+  const onChangeGender = (gen) => {
+    setGender(gen);
+  };
+  return (
+    <View style={styles.genderCtn} ref={ref}>
+      <Text style={styles.headerTitle}>{title}</Text>
+      <View style={STYLES.row}>
+        <View style={styles.gender}>
+          <CheckBox
+            disabled={disabled}
+            value={gender === MALE}
+            onValueChange={() => onChangeGender(MALE)}
+          />
+          <Text style={styles.txt}>Male</Text>
+        </View>
+        <View style={[styles.gender, {marginLeft: 10}]}>
+          <CheckBox
+            disabled={disabled}
+            value={gender === FEMALE}
+            onValueChange={() => onChangeGender(FEMALE)}
+          />
+          <Text style={styles.txt}>Female</Text>
+        </View>
+      </View>
+    </View>
+  );
+});
 const styles = StyleSheet.create({
   ctn: {
     flex: 1,
@@ -65,18 +139,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderColor: COLORS.darkTurquoise,
   },
-  txtInputCtn: {
+  inputCtn: {
     width: SIZES.width - SIZES.padding * 4,
-    marginHorizontal: SIZES.padding * 4,
+    marginVertical: SIZES.padding,
+  },
+  txtInputCtn: {
     borderWidth: 1,
-    borderColor: COLORS.darkgray,
-    borderRadius: SIZES.border,
+    borderColor: COLORS.gray,
+    borderRadius: SIZES.borderRadius,
     flexDirection: 'row',
   },
   txtInput: {
     paddingVertical: SIZES.padding2,
     marginLeft: SIZES.padding,
-    ...FONTS.txt5,
+    ...FONTS.txt4,
     flex: 1,
     color: 'black',
   },
@@ -84,14 +160,34 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     paddingHorizontal: SIZES.padding,
   },
-  inputCtn: {
-    marginHorizontal: SIZES.padding * 4,
-    marginVertical: SIZES.padding,
-  },
+
   headerTitle: {
-    marginHorizontal: SIZES.padding * 4,
-    paddingVertical: 3,
-    ...FONTS.body5,
+    paddingVertical: 5,
+    ...FONTS.txt4,
+  },
+  genderCtn: {
+    // justifyContent: 'space-between',
+  },
+  gender: {
+    borderWidth: 1,
+    borderColor: COLORS.gray,
+    paddingVertical: SIZES.padding,
+    alignItems: 'center',
+    width: (SIZES.width - SIZES.padding * 4 - 10) / 2,
+    borderRadius: SIZES.borderRadius,
+    flexDirection: 'row',
+    paddingLeft: SIZES.padding,
+  },
+  txt: {
+    paddingLeft: SIZES.padding,
+    ...FONTS.txt4,
+  },
+  body: {
+    marginTop: SIZES.top,
+    paddingHorizontal: SIZES.padding * 2,
+    paddingBottom: 100,
   },
 });
+const MALE = 'male';
+const FEMALE = 'female';
 export default ProfileScreen;

@@ -17,7 +17,7 @@ function MainStack() {
     <Stack.Navigator
       initialRouteName={'drawerHome'}
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}>
       <Stack.Screen name="drawerHome" component={DrawerScreen} />
     </Stack.Navigator>

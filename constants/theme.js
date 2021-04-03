@@ -34,11 +34,14 @@ export const COLORS = {
   boldGrey: '#3e3e3e',
   gray: '#C1C3C5',
   darkgray: '#C3C6C7',
+  // lightGrey: '#C3C9C9',
+
   darkTurquoise: '#50C9CE',
   csBackGround: '#F1F2F6',
   gainsboro: '#dcdcdc',
   lightblue: '#add8e6',
   mintcream: '#f5fffa',
+  lightBlack: '#000000',
   transparent: 'transparent',
 };
 
@@ -52,6 +55,7 @@ export const SIZES = {
   bottom: 30,
   top: 50,
   border: 5,
+  borderRadius: 5,
   // font sizes
   largeTitle: 50,
   h1: 30,
@@ -85,7 +89,9 @@ export const FONTS = {
   body4: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body4, lineHeight: 22},
   body5: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body5, lineHeight: 22},
   txt1: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body1},
-  txt5: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body5},
+  txt4: {fontFamily: 'SFUIDisplay-Light', fontSize: SIZES.body4},
+
+  txt5: {fontFamily: 'SFUIDisplay-Light', fontSize: SIZES.body5},
 };
 
 export const DARK_THEME = {
@@ -116,6 +122,16 @@ export const STYLES = {
     shadowRadius: 2.62,
 
     elevation: 4,
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  ctn: {
+    flex: 1,
+  },
+  borderTop: {
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
   },
 };
 
