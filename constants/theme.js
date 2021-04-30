@@ -37,6 +37,7 @@ export const COLORS = {
   // lightGrey: '#C3C9C9',
 
   darkTurquoise: '#50C9CE',
+  lightBlue: '#00bfff',
   csBackGround: '#F1F2F6',
   gainsboro: '#dcdcdc',
   lightblue: '#add8e6',

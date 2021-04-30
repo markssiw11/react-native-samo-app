@@ -5,7 +5,6 @@ import {COLORS} from '../../constants';
 function CheckBox({value = false, onValueChange, disabled}) {
   let iconName = value ? 'check-circle' : 'circle';
   let iconColor = value ? COLORS.primary : COLORS.gray;
-  console.log('renderCHECKBOX');
   const onChange = () => {
     if (typeof onValueChange === 'function') {
       onValueChange();

@@ -20,6 +20,8 @@ import {COLORS, SIZES, FONTS, STYLES} from '../../constants';
 // import CheckBox from '@react-native-community/checkbox';
 import BottomSheetScreen from '../../container/bottomSheet';
 import CheckBox from '../../container/checkBox';
+import DateTimeField from '../../container/dateTime';
+import {Slider} from 'react-native-simple-slider';
 function ProfileScreen(params) {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   const onPress = () => {
@@ -60,10 +62,8 @@ function ProfileScreen(params) {
           ref={formRef}
         />
         <BaseText icon="phone" title="Địa Chỉ" />
-        <BaseText icon="phone" title="Địa Chỉ" />
-        <BaseText icon="phone" title="Địa Chỉ" />
-        <BaseText icon="phone" title="Địa Chỉ" />
-
+        {/* <DateTimeField label="Ngay sinh" title="Ngay sinh" /> */}
+        <RenderSlider />
         <View style={{height: 200}} />
       </View>
       <BottomSheetScreen
@@ -75,7 +75,27 @@ function ProfileScreen(params) {
   );
 }
 const SIZE_ICON = 90;
-
+function RenderSlider() {
+  const [value, setValue] = React.useState();
+  return (
+    <View style={{}}>
+      <Text>hello</Text>
+      <Slider
+        maximumValue={10000000}
+        tintColor="green"
+        backgroundColor="#99E1D9"
+        minimumValue={0}
+        unit={1000}
+        widthLine={300}
+        mode="currency"
+        value={value}
+        style={{alignItems: 'center'}}
+        currencySetting={{lang: 'vi', fixed: 0}}
+        onChangeValue={setValue}
+      />
+    </View>
+  );
+}
 function BaseText({icon, value, title = 'Example'}) {
   return (
     <View style={styles.inputCtn}>
@@ -101,7 +121,11 @@ const GenderSelect = forwardRef(({value, title, disabled}, ref) => {
     <View style={styles.genderCtn} ref={ref}>
       <Text style={styles.headerTitle}>{title}</Text>
       <View style={STYLES.row}>
-        <View style={styles.gender}>
+        <View
+          style={[
+            styles.gender,
+            gender === MALE && {borderColor: COLORS.lightBlue},
+          ]}>
           <CheckBox
             disabled={disabled}
             value={gender === MALE}
@@ -109,7 +133,12 @@ const GenderSelect = forwardRef(({value, title, disabled}, ref) => {
           />
           <Text style={styles.txt}>Male</Text>
         </View>
-        <View style={[styles.gender, {marginLeft: 10}]}>
+        <View
+          style={[
+            styles.gender,
+            {marginLeft: 10},
+            gender === FEMALE && {borderColor: COLORS.info},
+          ]}>
           <CheckBox
             disabled={disabled}
             value={gender === FEMALE}
@@ -144,8 +173,7 @@ const styles = StyleSheet.create({
     marginVertical: SIZES.padding,
   },
   txtInputCtn: {
-    borderWidth: 1,
-    borderColor: COLORS.gray,
+    borderWidth: StyleSheet.hairlineWidth,
     borderRadius: SIZES.borderRadius,
     flexDirection: 'row',
   },
@@ -169,8 +197,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
   },
   gender: {
-    borderWidth: 1,
-    borderColor: COLORS.gray,
+    borderWidth: StyleSheet.hairlineWidth,
     paddingVertical: SIZES.padding,
     alignItems: 'center',
     width: (SIZES.width - SIZES.padding * 4 - 10) / 2,

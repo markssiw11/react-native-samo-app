@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/checkbox": "^0.5.7",
+    "@react-native-community/datetimepicker": "^3.4.3",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/drawer": "^5.12.4",
@@ -20,6 +21,7 @@
     "i18next": "^19.9.1",
     "immer": "^8.0.1",
     "install": "^0.13.0",
+    "moment": "^2.29.1",
     "react": "16.13.1",
     "react-i18next": "^11.8.8",
     "react-native": "0.63.4",
@@ -31,6 +33,7 @@
     "react-native-iphone-x-helper": "^1.3.1",
     "react-native-keyboard-aware-scroll-view": "^0.9.3",
     "react-native-linear-gradient": "^2.5.6",
+    "react-native-simple-slider": "https://github.com/markssiw11/react-native-simple-slider.git#21d90ca1eb08f41183437a1358e416b271856ab3",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.16.1",

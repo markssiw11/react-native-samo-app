@@ -1138,6 +1138,13 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
+"@react-native-community/datetimepicker@^3.4.3":
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-3.4.3.tgz#e57cc254a53ea7c4229ad7c4cfc3368c109c1db3"
+  integrity sha512-FaryfNYxWvgL2YH+CPhbKl2viLwsYFSq+vrhQT8IHB+uOTPhRtRZ0sWSU1N3eWy8HFwqmTw2Ao5uVgn8cvsUew==
+  dependencies:
+    invariant "^2.2.4"
+
 "@react-native-community/eslint-config@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-config/-/eslint-config-1.1.0.tgz#2dacad06dd44d13e778510864473fc6091f080c0"
@@ -5200,6 +5207,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
+moment@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5924,6 +5936,10 @@ react-native-screens@^2.16.1:
   version "2.18.0"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.18.0.tgz#8652f8e77fdfd38ffb355eab32a22644e956745c"
   integrity sha512-8+lCEsxzSu55GWRw6yZpyt3OszxN1OngfBsFXdqspaEfq6uIChanzlcD2PLVQl+iN82GAcrZM800Kd1pA477ZQ==
+
+"react-native-simple-slider@https://github.com/markssiw11/react-native-simple-slider.git#21d90ca1eb08f41183437a1358e416b271856ab3":
+  version "0.0.1"
+  resolved "https://github.com/markssiw11/react-native-simple-slider.git#21d90ca1eb08f41183437a1358e416b271856ab3"
 
 react-native-svg@^12.1.0:
   version "12.1.0"
