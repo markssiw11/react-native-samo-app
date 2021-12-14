@@ -12,6 +12,7 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
+  FlatList,
 } from 'react-native';
 
 //import library for the TreeView
@@ -42,65 +43,69 @@ const ChannelTreeView = ({navigation}) => {
   };
   if (loading) return <ActivityIndicator size="large" color="black" />;
   return (
-    <ScrollView horizontal style={{flex: 1}}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        horizontal={false}
-        style={{flex: 1, paddingTop: 40}}>
-        <View style={{paddingBottom: 100}}>
-          <TreeView
-            data={channelData}
-            getCollapsedNodeHeight={() => 60}
-            renderNode={({node, level, isExpanded, hasChildrenNodes}) => {
-              return (
-                <View style={styles.itemBase}>
-                  <View style={[styles.itemCtn, {marginLeft: 50 * level}]}>
-                    <View style={styles.circleCtn}>
-                      <View style={styles.totalChildren}>
-                        {!node.isParent ? (
-                          <Text style={styles.totalChildrenTxt}>
-                            {node.totalChildren}
-                          </Text>
-                        ) : (
-                          <FontAwesome5Icon
-                            name="plus"
-                            size={15}
-                            color={COLORS.gray}
-                          />
-                        )}
-                      </View>
-                      {!isExpanded &&
-                        !node.isLastIndex &&
-                        !node.isSameLevel && (
-                          <View style={styles.verticalLine} />
-                        )}
-                    </View>
-                    <View style={styles.line} />
-                    <TouchableOpacity
-                      style={{flexDirection: 'row'}}
-                      onPress={() => onPressDetail(navigation, node)}>
-                      <View style={styles.circleCtn}>
-                        <View
-                          style={[
-                            styles.circle,
-                            node.isMe && {backgroundColor: COLORS.warring},
-                          ]}>
-                          <Text style={styles.position}>{node.position}</Text>
-                        </View>
-                        {(isExpanded ||
-                          (node.isSameLevel && !node.isLastIndex)) && (
-                          <View style={styles.verticalLine} />
-                        )}
-                      </View>
-                      <Text style={styles.name}>{node.name}</Text>
-                    </TouchableOpacity>
+    <View style={{flex: 1}}>
+      <FlatList
+        data={[channelData]}
+        keyExtractor={(_, index) => `${index}`}
+        renderItem={RenderTreeView}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      />
+    </View>
+  );
+};
+const RenderTreeView = ({item}) => {
+  return (
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <TreeView
+        data={item}
+        getCollapsedNodeHeight={() => 60}
+        renderNode={({node, level, isExpanded, hasChildrenNodes}) => {
+          return (
+            <View style={styles.itemBase}>
+              <View style={[styles.itemCtn, {marginLeft: 50 * level}]}>
+                <View style={styles.circleCtn}>
+                  <View style={styles.totalChildren}>
+                    {!node.isParent ? (
+                      <Text style={styles.totalChildrenTxt}>
+                        {node.totalChildren}
+                      </Text>
+                    ) : (
+                      <FontAwesome5Icon
+                        name="plus"
+                        size={15}
+                        color={COLORS.gray}
+                      />
+                    )}
                   </View>
+                  {!isExpanded && !node.isLastIndex && !node.isSameLevel && (
+                    <View style={styles.verticalLine} />
+                  )}
                 </View>
-              );
-            }}
-          />
-        </View>
-      </ScrollView>
+                <View style={styles.line} />
+                <TouchableOpacity
+                  style={{flexDirection: 'row'}}
+                  onPress={() => {}}>
+                  <View style={styles.circleCtn}>
+                    <View
+                      style={[
+                        styles.circle,
+                        node.isMe && {backgroundColor: COLORS.warring},
+                      ]}>
+                      <Text style={styles.position}>{node.position}</Text>
+                    </View>
+                    {(isExpanded ||
+                      (node.isSameLevel && !node.isLastIndex)) && (
+                      <View style={styles.verticalLine} />
+                    )}
+                  </View>
+                  <Text style={styles.name}>{node.name}</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          );
+        }}
+      />
     </ScrollView>
   );
 };

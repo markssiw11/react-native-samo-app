@@ -1,5 +1,5 @@
 import {data} from './data';
-export const getChannelNodeFromApi = (from = 0, size = 10) => {
+export const getChannelNodeFromApi = (from = 0, size = 100) => {
   return fetch(
     `http://192.168.1.38:7979/bts/api/v1/channelNode/list?from=${from}&size=${size}`,
     {
@@ -11,7 +11,8 @@ export const getChannelNodeFromApi = (from = 0, size = 10) => {
     },
   )
     .then((response) => {
-      return response.json();
+      // return response.json();
+      return data;
     })
     .catch((error) => {
       console.error(error);
