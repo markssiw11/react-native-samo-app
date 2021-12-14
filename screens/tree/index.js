@@ -2,7 +2,7 @@
 // https://aboutreact.com/react-native-final-tree-view/
 
 // import React in our code
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 // import all the components we are going to use
 import {
   SafeAreaView,
@@ -11,89 +11,36 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 
 //import library for the TreeView
 import TreeView from 'react-native-final-tree-view';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import {COLORS, FONTS, SIZES} from '../../constants';
-
-//Dummy data for the Tree View
-const state = {
-  data: [
-    {
-      name: 'Nguyễn Văn Long',
-      phoneNumber: '0564573847',
-      idNumber: '191860601',
-      commissionerId: '5d4538632245a100106d3a86',
-      level: 0,
-      position: 'ND',
-      id: '5ee062802d371c0018516699',
-      totalChildren: 3,
-      isLastIndex: true,
-      children: [
-        {
-          name: 'Vũ Canh Kỹ',
-          phoneNumber: '0393604620',
-          idNumber: '192764736',
-          commissionerId: '5e69e69ba72d8f00183fb6f4',
-          level: 5,
-          position: 'SM',
-          parentNode: '[object Object]',
-          ancestorNodes: ['5ee062802d371c0018516699'],
-          id: '5ee06290dd87710011b90d43',
-          totalChildren: 0,
-          isMe: true,
-          isLastIndex: false,
-          children: [],
-          isSameLevel: true,
-        },
-        {
-          name: 'ĐINH THỊ HƯƠNG (Đồng cấp)',
-          phoneNumber: '0389325646',
-          idNumber: '113609009',
-          commissionerId: '5d6f573111505e00199524ed',
-          level: 5,
-          position: 'SM',
-          parentNode: '5ee06290dd87710011b90d43',
-          ancestorNodes: [
-            '5ee06290dd87710011b90d43',
-            '5ee062802d371c0018516699',
-          ],
-          id: '5f718ab90869c200187cf1ec',
-          totalChildren: 0,
-          isLastIndex: false,
-          children: [],
-          isSameLevel: true,
-        },
-        {
-          name: 'LÊ ÁNH HỒNG (Đồng cấp)',
-          phoneNumber: '0354219993',
-          idNumber: '113583541',
-          commissionerId: '5d6f554311505e00199524e4',
-          level: 5,
-          position: 'SM',
-          parentNode: '5ee06290dd87710011b90d43',
-          ancestorNodes: [
-            '5ee06290dd87710011b90d43',
-            '5ee062802d371c0018516699',
-          ],
-          id: '5f7ae1cf0869c200187d003e',
-          totalChildren: 0,
-          isLastIndex: true,
-          children: [],
-          isSameLevel: true,
-        },
-      ],
-      isParent: true,
-    },
-  ],
-};
+import {getChannelNodeFromApi, getProductFormApi} from './api';
 
 const onPressDetail = (navigation, params) => {
   navigation.navigate('NodeDetails', params);
 };
 const ChannelTreeView = ({navigation}) => {
+  const [channelData, setChannelData] = useState([]);
+  const [from, setFrom] = useState(0);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = async () => {
+    try {
+      const _data = await getChannelNodeFromApi(from);
+      setChannelData(_data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  if (loading) return <ActivityIndicator size="large" color="black" />;
   return (
     <ScrollView horizontal style={{flex: 1}}>
       <ScrollView
@@ -102,7 +49,7 @@ const ChannelTreeView = ({navigation}) => {
         style={{flex: 1, paddingTop: 40}}>
         <View style={{paddingBottom: 100}}>
           <TreeView
-            data={state.data}
+            data={channelData}
             getCollapsedNodeHeight={() => 60}
             renderNode={({node, level, isExpanded, hasChildrenNodes}) => {
               return (

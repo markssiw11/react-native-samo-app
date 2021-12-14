@@ -40,6 +40,7 @@
 		E34C5ADF13A4445B886C241C /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8FB03B9ECDB42EE9323048D /* RobotoCondensed-Regular.ttf */; };
 		EBC4D2B180C442B8B7A8A945 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA88C4BFB7E245DB83D4D1BD /* RobotoCondensed-Bold.ttf */; };
 		EE9EE19C5B184F3BA45E0B97 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4520117F7BD34D6BB45FAC3A /* Roboto-Italic.ttf */; };
+		FD3FE588273ED5A100CEF0C3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FE587273ED5A100CEF0C3 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FC61968677904B55864029CA /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		FD3FE586273ED5A100CEF0C3 /* DigitalWalletApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DigitalWalletApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD3FE587273ED5A100CEF0C3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FFFC24901C32261871D2F421 /* Pods-DigitalWalletApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWalletApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DigitalWalletApp-tvOS/Pods-DigitalWalletApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +277,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				FD3FE587273ED5A100CEF0C3 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* DigitalWalletApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DigitalWalletAppTests */,
@@ -281,6 +285,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7845E6F53AB577CD321DA972 /* Pods */,
 				162AA7D0BACC4AC1A36071F5 /* Resources */,
+				FD3FE586273ED5A100CEF0C3 /* DigitalWalletApp-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				59177EB5DD07A0B03D1FE447 /* [CP] Copy Pods Resources */,
+				A63A0AEFCE0ED096BF5B5124 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +338,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				9DC657B365810A4137777FD6 /* [CP] Copy Pods Resources */,
+				4E0F69A1D8AB21BDDF724870 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,7 +402,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 64246H4M77;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -580,6 +587,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		4E0F69A1D8AB21BDDF724870 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigitalWalletApp/Pods-DigitalWalletApp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigitalWalletApp/Pods-DigitalWalletApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		59177EB5DD07A0B03D1FE447 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -702,6 +727,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigitalWalletApp/Pods-DigitalWalletApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A63A0AEFCE0ED096BF5B5124 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigitalWalletApp-DigitalWalletAppTests/Pods-DigitalWalletApp-DigitalWalletAppTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigitalWalletApp-DigitalWalletAppTests/Pods-DigitalWalletApp-DigitalWalletAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -756,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				FD3FE588273ED5A100CEF0C3 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +853,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A10C0BE46D278E02C597175 /* Pods-DigitalWalletApp-DigitalWalletAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -832,6 +877,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61E4A3F3336822C3E117D036 /* Pods-DigitalWalletApp-DigitalWalletAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = DigitalWalletAppTests/Info.plist;
@@ -859,6 +905,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64246H4M77;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = DigitalWalletApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -869,6 +917,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp1;
 				PRODUCT_NAME = DigitalWalletApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DigitalWalletApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -885,6 +934,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64246H4M77;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = DigitalWalletApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -895,6 +945,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.byprogrammers.DigitalWalletApp1;
 				PRODUCT_NAME = DigitalWalletApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DigitalWalletApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
